@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/bg.jpg);
+}
+
+header {
+    position: relative;
+    height: 100px;
+    text-align: center;
+    background: url(../images/head_bg.png) no-repeat;
+    line-height: 1.5rem;
+    background-size: 100% 100%;
+
+    h1 {
+        font-size: 38px;
+        color: white;
+        line-height: 80px;
+    }
+
+    .showtime {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        line-height: 75px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+section {
+    // width: 1920px;
+    min-width: 1024px;
+    // height: 300px;
+    // background-color: darkblue;
+    padding: 10px 10px 0 10px;
+    display: flex;
+
+    // flex-direction: column;
+    .column {
+        flex: 3;
+
+        &:nth-of-type(2) {
+            flex: 5;
+        }
+
+        .panel {
+            position: relative;
+            height: 310px;
+            border: 1px solid rgba(25, 186, 139, 0.17);
+            background: url(../images/line.png);
+            padding: 15px 15px 40px;
+            margin-bottom: 15px;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid #02a6b5;
+                border-top: 2px solid #02a6b5;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #02a6b5;
+                border-top: 2px solid #02a6b5;
+            }
+
+            .panel-footer {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-left: 2px solid #02a6b5;
+                    border-bottom: 2px solid #02a6b5;
+                }
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-right: 2px solid #02a6b5;
+                    border-bottom: 2px solid #02a6b5;
+                }
+            }
+            h2{
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                height: 48px;
+            }
+        }
+    }
+}
+
+//滚动条样式
+::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 6px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 50px;
+    background: #ddd;
+  }
+
+  ::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: none;
+  }
